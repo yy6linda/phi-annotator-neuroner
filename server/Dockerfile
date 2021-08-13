@@ -16,11 +16,18 @@ RUN apt-get update -qq -y \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR ${APP_DIR}
+COPY data data/
 COPY openapi_server openapi_server/
 COPY requirements.txt prod-requirements.txt uwsgi.ini ./
 RUN pip install --no-cache-dir \
-    -r requirements.txt -r prod-requirements.txt
-    # && python -m spacy download en
+    -r requirements.txt -r prod-requirements.txt \
+    # Install
+    && python -m spacy download en_core_web_sm \
+    # Required folder
+    && mkdir -p output \
+    # Create the user used by uWSGI to run the tool
+    && useradd --create-home --shell /bin/bash nlp \
+    && chown -R nlp:nlp ${APP_DIR}
 
 WORKDIR /
 COPY docker-entrypoint.sh .
