@@ -56,7 +56,7 @@ configures NeuroNer to run offline.
 
 ## Specification
 
-- NLP Sandbox tool version: 0.1.0
+- NLP Sandbox tool version: 1.0.0
 - NLP Sandbox schemas version: 1.2.0
 - Docker image: [docker.synapse.org/syn26015513/neuro-ner-phi-annotator-example](https://www.synapse.org/#!Synapse:syn26015616)
 
