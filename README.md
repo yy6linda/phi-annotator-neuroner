@@ -91,8 +91,8 @@ You can stop the container run with `Ctrl+C`, followed by `docker compose down`.
 Create a Conda environment.
 
 ```console
-conda create --name phi-annotator python=3.9 -y
-conda activate phi-annotator
+conda create --name phi-annotator-neuroner python=3.9 -y
+conda activate phi-annotator-neuroner
 ```
 
 Install and start this NLP Sandbox PHI annotator.

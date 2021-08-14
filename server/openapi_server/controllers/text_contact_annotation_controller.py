@@ -1,10 +1,10 @@
 import connexion
-import re
 from openapi_server.models.error import Error  # noqa: E501
 from openapi_server.models.text_contact_annotation_request import TextContactAnnotationRequest  # noqa: E501
 from openapi_server.models.text_contact_annotation import TextContactAnnotation
 from openapi_server.models.text_contact_annotation_response import TextContactAnnotationResponse  # noqa: E501
 from openapi_server.neuroner import neuroner
+
 
 def create_text_contact_annotations(text_contact_annotation_request=None):  # noqa: E501
     """Annotate contacts in a clinical note
@@ -41,7 +41,7 @@ def add_contact_annotations(annotations, matches):
     for match in matches:
         # TODO: Are there non-straightforward types that we can support?
         # TODO: Use "other" when applicable
-        if match['type'] in ["PHONE","URL","EMAIL","FAX"]:
+        if match['type'] in ["PHONE", "URL", "EMAIL", "FAX"]:
             annotations.append(TextContactAnnotation(
                 start=match['start'],
                 length=len(match['text']),

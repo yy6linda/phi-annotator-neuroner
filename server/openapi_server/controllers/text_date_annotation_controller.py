@@ -1,13 +1,10 @@
 import connexion
-import re
-
 from openapi_server.models.error import Error  # noqa: E501
-from openapi_server.models.text_date_annotation_request import \
-    TextDateAnnotationRequest  # noqa: E501
+from openapi_server.models.text_date_annotation_request import TextDateAnnotationRequest  # noqa: E501
 from openapi_server.models.text_date_annotation import TextDateAnnotation
-from openapi_server.models.text_date_annotation_response import \
-    TextDateAnnotationResponse  # noqa: E501
+from openapi_server.models.text_date_annotation_response import TextDateAnnotationResponse  # noqa: E501
 from openapi_server.neuroner import neuroner
+
 
 def create_text_date_annotations():  # noqa: E501
     """Annotate dates in a clinical note

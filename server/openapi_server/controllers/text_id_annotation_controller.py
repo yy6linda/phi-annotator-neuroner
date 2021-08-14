@@ -1,10 +1,10 @@
 import connexion
-import re
 from openapi_server.models.error import Error  # noqa: E501
 from openapi_server.models.text_id_annotation_request import TextIdAnnotationRequest  # noqa: E501
 from openapi_server.models.text_id_annotation import TextIdAnnotation
 from openapi_server.models.text_id_annotation_response import TextIdAnnotationResponse  # noqa: E501
 from openapi_server.neuroner import neuroner
+
 
 def create_text_id_annotations(text_id_annotation_request=None):  # noqa: E501
     """Annotate IDs in a clinical note
@@ -34,6 +34,7 @@ def create_text_id_annotations(text_id_annotation_request=None):  # noqa: E501
         res = Error("Bad request", status, "Missing body")
     return res, status
 
+
 def add_id_annotations(annotations, matches):
     """
     Converts matches to TextIdAnnotation objects and adds them to the
@@ -41,11 +42,11 @@ def add_id_annotations(annotations, matches):
     """
     # TODO Clarify the source for this list
     id_map = {
-        "BIOID":"bio_id",
+        "BIOID": "bio_id",
         "IDNUM": "id_number",
-        "MEDICALRECORD" :"medical_record",
-        "MEDICAL RECORD" :"medical_record",
-        "MEDICAL_RECORD" :"medical_record",
+        "MEDICALRECORD": "medical_record",
+        "MEDICAL RECORD": "medical_record",
+        "MEDICAL_RECORD": "medical_record",
         "SSN": "ssn",
         "DEVICE": "device",
         "ACCOUNT": "account",

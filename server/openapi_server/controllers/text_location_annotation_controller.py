@@ -1,12 +1,10 @@
 import connexion
-import pandas as pd
-import re
-
 from openapi_server.models.error import Error  # noqa: E501
 from openapi_server.models.text_location_annotation import TextLocationAnnotation  # noqa: E501
 from openapi_server.models.text_location_annotation_request import TextLocationAnnotationRequest  # noqa: E501
 from openapi_server.models.text_location_annotation_response import TextLocationAnnotationResponse  # noqa: E501
 from openapi_server.neuroner import neuroner
+
 
 def create_text_location_annotations():  # noqa: E501
     """Annotate locations in a clinical note
@@ -48,7 +46,7 @@ def add_location_annotations(annotations, matches):
     for match in matches:
         # TODO Clarify types
         # TODO Does not annotate Seattle?
-        if match['type'] in ["CITY","COUNTRY","STATE","STREET"]:
+        if match['type'] in ["CITY", "COUNTRY", "STATE", "STREET"]:
             annotations.append(
                 TextLocationAnnotation(
                     start=match['start'],
