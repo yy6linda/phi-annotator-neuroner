@@ -1,4 +1,4 @@
-FROM python:3.6
+FROM python:3.7.11-slim-buster
 
 ENV APP_DIR=/opt/app
 
@@ -21,9 +21,9 @@ COPY openapi_server openapi_server/
 COPY requirements.txt prod-requirements.txt uwsgi.ini ./
 RUN pip install --no-cache-dir \
     -r requirements.txt -r prod-requirements.txt \
-    # Install
+    # Install spacy assets required by NeuroNER
     && python -m spacy download en_core_web_sm \
-    # Required folder
+    # Create folder required by NeuroNER
     && mkdir -p output \
     # Create the user used by uWSGI to run the tool
     && useradd --create-home --shell /bin/bash nlp \
