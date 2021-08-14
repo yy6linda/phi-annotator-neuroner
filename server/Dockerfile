@@ -25,7 +25,7 @@ RUN curl -O http://neuroner.com/data/word_vectors/glove.6B.100d.zip \
     && rm -fr data/word_vectors/* \
     && unzip glove.6B.100d.zip -d data/word_vectors
 
-COPY requirements.txt prod-requirements.txt uwsgi.ini ./
+COPY requirements.txt prod-requirements.txt ./
 RUN pip install --no-cache-dir \
     -r requirements.txt -r prod-requirements.txt \
     # Install spacy assets required by NeuroNER
@@ -33,6 +33,7 @@ RUN pip install --no-cache-dir \
     # Create folder required by NeuroNER
     && mkdir -p output
 
+COPY uwsgi.ini ./
 COPY openapi_server openapi_server/
 # Create the user used by uWSGI to run the tool
 RUN useradd --create-home --shell /bin/bash nlp \
