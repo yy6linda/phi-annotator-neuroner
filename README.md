@@ -21,8 +21,8 @@ Annotator API] written in Python-Flask. An NLP Sandbox PHI annotator takes as
 input a clinical note (text) and outputs a list of predicted PHI annotations
 found in the clinical note. Here PHIs are identified using regular expressions.
 
-This NLP Sandbox tool uses the [NeuroNER](https://github.com/Franck-Dernoncourt/NeuroNER) model to annotate PHI in clinical notes. 
-Because NLP Sandbox tools must run without access to internet connection, this implementation 
+This NLP Sandbox tool uses the [NeuroNER](https://github.com/Franck-Dernoncourt/NeuroNER) model to annotate PHI in clinical notes.
+Because NLP Sandbox tools must run without access to internet connection, this implementation
 configures NeuroNer to run offline.
 
 
@@ -56,8 +56,8 @@ configures NeuroNer to run offline.
 
 ## Specification
 
+- NLP Sandbox tool version: 0.1.0
 - NLP Sandbox schemas version: 1.2.0
-- NLP Sandbox tool version: 1.2.1
 - Docker image: [docker.synapse.org/syn26015513/neuro-ner-phi-annotator-example](https://www.synapse.org/#!Synapse:syn26015616)
 
 ## Requirements
@@ -91,8 +91,8 @@ You can stop the container run with `Ctrl+C`, followed by `docker compose down`.
 Create a Conda environment.
 
 ```console
-conda create --name phi-annotator python=3.9 -y
-conda activate phi-annotator
+conda create --name phi-annotator-neuroner python=3.7 -y
+conda activate phi-annotator-neuroner
 ```
 
 Install and start this NLP Sandbox PHI annotator.
@@ -294,7 +294,7 @@ prevent tools from connecting to remote servers.
 The entities that can be identified using the
 neuro-phi-annotator are listed below:
 
-| #     | Enitity  | 
+| #     | Enitity  |
 |-------|----------|
 |1.     | ID       |
 |2.     | DATE     |
