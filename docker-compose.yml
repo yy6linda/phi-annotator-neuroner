@@ -8,6 +8,10 @@ services:
     container_name: phi-annotator
     networks:
       - nlpsandbox-internal
+    deploy:
+      resources:
+        limits:
+          memory: 7G
 
   nginx:
     image: nginx:1.19.6-alpine

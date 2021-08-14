@@ -13,15 +13,15 @@ def get_tool():  # noqa: E501
     :rtype: Tool
     """
     tool = Tool(
-        name="phi-annotator-example",
+        name="neuroner",
         version="0.1.0",
         license=License.APACHE_2_0,
-        repository="github:nlpsandbox/phi-annotator-example",
-        description="Example implementation of the NLP Sandbox PHI " +
-                "Annotator API",
+        repository="github:nlpsandbox/phi-annotator-neuroner",
+        description="A named-entity recognition program based " +
+                "on neural networks",
         author="NLP Sandbox Team",
         author_email="team@nlpsandbox.io",
-        url="https://github.com/nlpsandbox/phi-annotator-example",
+        url="https://github.com/nlpsandbox/phi-annotator-neuroner",
         type=ToolType.PHI_ANNOTATOR,
         api_version="1.2.0"
     )
