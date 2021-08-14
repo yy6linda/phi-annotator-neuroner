@@ -15,7 +15,7 @@ services:
 
   nginx:
     image: nginx:1.19.6-alpine
-    container_name: nginx
+    container_name: phi-annotator-nginx
     restart: always
     environment:
       - TOOL_HOST=phi-annotator
