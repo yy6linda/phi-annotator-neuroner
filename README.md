@@ -51,7 +51,7 @@ Person Name | [TextPersonNameAnnotation] | No
 
 ## Specification
 
-- NLP Sandbox tool version: 1.0.0
+- NLP Sandbox tool version: 1.1.0
 - NLP Sandbox schemas version: 1.2.0
 - Docker image: [docker.synapse.org/syn22277123/phi-annotator-neuroner]
 
