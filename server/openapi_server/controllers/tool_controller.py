@@ -14,7 +14,7 @@ def get_tool():  # noqa: E501
     """
     tool = Tool(
         name="neuroner",
-        version="1.1.0",
+        version="1.1.1",
         license=License.APACHE_2_0,
         repository="github:nlpsandbox/phi-annotator-neuroner",
         description="A named-entity recognition program based " +
