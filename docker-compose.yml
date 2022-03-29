@@ -27,7 +27,7 @@ services:
       - nlpsandbox
       - nlpsandbox-internal
     ports:
-      - "80:80"
+      - "8080:8082"
     depends_on:
       - phi-annotator
 

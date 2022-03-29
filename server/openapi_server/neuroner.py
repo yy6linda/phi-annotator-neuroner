@@ -9,7 +9,7 @@ class Neuroner:
         self.model = neuromodel.NeuroNER(
             train_model=False,
             use_pretrained_model=True,
-            dataset_text_folder="data/example_unannotated_texts",
+            dataset_text_folder="data/i2b2_2014_deid",
             pretrained_model_folder="data/trained_models/i2b2_2014_glove_spacy_bioes",  # noqa: E501
             parameters_filepath='.',
             spacylanguage="en_core_web_sm",
