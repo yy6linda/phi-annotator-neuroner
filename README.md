@@ -28,7 +28,7 @@ Contact     | [TextContactAnnotation]    | Yes
 Date        | [TextDateAnnotation]       | Yes
 ID          | [TextIdAnnotation]         | Yes
 Location    | [TextLocationAnnotation]   | Yes
-Person Name | [TextPersonNameAnnotation] | No
+Person Name | [TextPersonNameAnnotation] | Yes
 
 
 ## Table of contents
