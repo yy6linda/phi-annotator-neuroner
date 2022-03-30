@@ -90,6 +90,7 @@ Download the word embeddings file (too large to be tracked on GitHub).
 curl -O http://neuroner.com/data/word_vectors/glove.6B.100d.zip
 unzip glove.6B.100d.zip -d server/data/word_vectors/
 ```
+Download i2b2 dataset under `./server/data`
 
 Install and start this NLP Sandbox tool.
 
