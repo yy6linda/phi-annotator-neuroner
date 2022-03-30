@@ -26,6 +26,7 @@ RUN curl -O http://neuroner.com/data/word_vectors/glove.6B.100d.zip \
     && unzip glove.6B.100d.zip -d data/word_vectors
 
 COPY requirements.txt prod-requirements.txt ./
+RUN pip install --upgrade pip 
 RUN pip install --no-cache-dir \
     -r requirements.txt -r prod-requirements.txt \
     # Install spacy assets required by NeuroNER
